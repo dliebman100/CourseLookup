@@ -87,9 +87,13 @@ write code in the window.onload event handler to: 1)call a soon-to-be written lo
 
 code the loadTitlesDropdown() function to load the course titles into the dropdown. For the value, use the course id. Make sure you add a "Select one..." option as the first option in the dropdown.
 */
-window.onload = function () {
+window.onload = function() {
     loadTitlesDropdown();
 }
+// window.onload = function() {
+//     const showDetailsBtn = document.getElementById("showDetailsBtn");
+//     showDetailsBtn.onclick = showDetailsBtnClicked;
+// }
 
 function loadTitlesDropdown() {
     //use label tag titleDropdown
