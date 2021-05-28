@@ -67,7 +67,7 @@ let data = [{
     {
         CourseId: "19SUM800",
         Title: "Introduction to Doodads",
-        Instructor: "Snape",
+        Instructor: "Ted Vinaigrette",
         Location: "Classroom 9 3/4",
         StartDate: "09/16/19",
         Fee: 50.00,
@@ -75,7 +75,7 @@ let data = [{
     {
         CourseId: "19SUM900",
         Title: "Introduction to the Computer Thingys",
-        Instructor: "Sum Guy",
+        Instructor: "Dr. Doctor",
         Location: "Classroom 0",
         StartDate: "09/16/19",
         Fee: 50.00,
