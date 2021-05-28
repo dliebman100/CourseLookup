@@ -89,12 +89,9 @@ code the loadTitlesDropdown() function to load the course titles into the dropdo
 */
 window.onload = function() {
     loadTitlesDropdown();
+    const showDetailsBtn = document.getElementById("showDetailsBtn");
+    showDetailsBtn.onclick = showDetailsBtnClicked;
 }
-// window.onload = function() {
-//     const showDetailsBtn = document.getElementById("showDetailsBtn");
-//     showDetailsBtn.onclick = showDetailsBtnClicked;
-// }
-
 function loadTitlesDropdown() {
     //use label tag titleDropdown
     const titleDropdown = document.getElementById("titleDropdown");
@@ -109,4 +106,26 @@ function loadTitlesDropdown() {
 
         titleDropdown.appendChild(theOption)
     }
+}
+function showDetailsBtnClicked() {
+    const coursePara = document.getElementById("coursePara");
+    coursePara.innerHTML = "";
+
+    const titlePara = document.getElementById("titlePara");
+    titlePara.innerHTML = "";
+
+    //get the data selected from the dropdown list <label>
+    const titleDropdown = document.getElementById("titleDropdown");
+    let selectedCourseId = titleDropdown.value
+    
+    if (selectedCourseId == ""){
+        alert("Please select a course first");
+        return;
+    }
+    //go find the data in the array
+    let matchingCourse = data.find(arrayElement => arrayElement.CourseId == selectedCourseId);
+
+    //display the specific matching data below the butoon in the details area
+    coursePara.innerHTML = matchingCourse.CourseId
+    titlePara.innerHTML = matchingCourse.Title
 }
